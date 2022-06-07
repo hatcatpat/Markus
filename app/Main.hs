@@ -237,4 +237,4 @@ main = do
   checkParser p
   -- repeatIO 2 (putChar '\n')
   -- print c
-  writeFile "test.html" ("<html><body>" ++ c ++ "</body></html>")
+  writeFile "output.html" ("<html><body>" ++ c ++ "</body></html>")
