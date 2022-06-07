@@ -1,0 +1,98 @@
+@...\n -> title
+||...\n -> header 2
+*...* -> bold
+/.../ -> italic
+[...][...] -> link url name
+[...] -> link url url
+#... -> ordered list [SPECIFIES THAT THE REST OF THE PARAGRAPH IS ALL LISTS]
+-... -> unordered list
+#...
+  -... -> ordered list with unordered sub list (etc)
+
+
+
+| -> says that the rest of the paragraph is a h1
+# -> says that the rest of the paragraph is inside an ordered list
+
+
+List Unordered [(List Unordered [LIST OF ALL ENTRIES IN THIS GUY])]
+
+
+# one
+	- a
+	- b
+		- c
+# two
+
+Elem Ordered 0 "one" 
+Elem Unordered 1 "a"
+Elem Unordered 1 "b" 
+Elem Unordered 2 "c"
+Elem Ordered 0 "two" 
+
+List o 0
+	one
+	List u 1
+		a
+		b
+		List u 2
+			c
+	two
+
+<ol>
+	<li>one</li>
+	<ul>
+		<li>a</li>
+		<li>b</li>
+	</ul>
+	<ul>
+		<li>c</li>
+	</ul>
+	<li>two</li>
+</ol>
+
+
+
+POSSIBLE ALTERNATIVE?
+%b[hello]
+
+[] === id (basic way of forming a block)
+
+%x[] === a block, with type x
+
+%lu[
+	there
+	buddy
+	oof
+]
+== %list-unordered
+
+=== lu takes a string, splits it into newlines, uses each elem as a listElem
+
+%link[url name]
+%link[url]
+== %li
+
+%image[url alt w h]
+%image[url alt]
+%image[url]
+== %im
+
+hello %b[there] %im[http.com [alt tag] w h]
+
+%ul[
+	hi
+	%ol[
+		one
+		two
+		three
+	]
+	buddy
+]
+
+
+%g[
+	%r[a b c]
+	%r[d e f]
+	%r[g h i]
+]
